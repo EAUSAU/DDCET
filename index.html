@@ -136,6 +136,9 @@
   text-decoration: none;
   cursor: pointer;
 }
+.highlighted {
+    background-color: rgba(0, 0, 0, 0.462);
+  }
     </style>
 </head>
 <body>
@@ -144,8 +147,8 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Latest Update</h2>
-      <p>Computer Practice & Environmetal Science</p>
-      <a id="updateLink" href="#B">Click here for details</a>
+      <p>Computer Practice & Environmental Science</p>
+      <a id="updateLink" href="#section" class="highlight-link">Click here for details</a>
     </div>
   </div>
 <!-- Notification -->
@@ -354,13 +357,13 @@
 
          <tr><th colspan="5" id="B">Computer Practice [10 Marks]</th></tr>
          <tr>
-         <td colspan="4">
+         <td colspan="4" id="section">
              <a href="https://youtu.be/Ut4RpySLM6Y?si=GYyN2wuTnKufG0de&t=200"target="_blank"><i class="fas fa-external-link-alt"></i></a>
          </td>
          </tr>
          <tr><th colspan="5" id="G">Environmental Science [10 Marks]</th></tr>
          <tr>
-         <td colspan="4">
+         <td colspan="4" id="section">
              <a href="https://drive.google.com/file/d/1wBU5e_kI6T5gNnf4gZA2ecRVEz-lwbkG/view?usp=drivesdk"target="_blank"><i class="fas fa-external-link-alt"></i></a>
          </td>
          </tr>
@@ -396,6 +399,37 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+        // Highlight
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.highlight-link');
+  
+  links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      var targetId = link.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        // Remove highlight from all elements
+        document.querySelectorAll('.highlighted').forEach(function(el) {
+          el.classList.remove('highlighted');
+        });
+        
+        // Highlight the target element
+        targetElement.classList.add('highlighted');
+        
+        // Remove highlight after 3 seconds (3000 milliseconds)
+        setTimeout(function() {
+          targetElement.classList.remove('highlighted');
+        }, 1500);
+        
+        // Optionally, scroll to the target element
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
+// Highlight
 </script>
     
 </body>
