@@ -147,8 +147,12 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Latest Update</h2>
-      <p>Computer Practice & Environmental Science</p>
-      <a id="updateLink" href="#section" class="highlight-link">Click here for details</a>
+     <p>Environmental Science</p>
+      <a id="updateLink" href="#section3" class="highlight-link">Click here for details</a>
+      <p>Computer Practice</p>
+      <a id="updateLink" href="#section2" class="highlight-link">Click here for details</a>
+      <p>Maths Ch 3 Vectors</p>
+      <a id="updateLink" href="#section1" class="highlight-link">Click here for details</a>
     </div>
   </div>
 <!-- Notification -->
@@ -188,7 +192,7 @@
        <td><a href="https://drive.google.com/file/d/15eNW2zlh-z7GaSZJrw9rrrFnsGMbVhHj/view?usp=sharing"target="_blank"><i class="fas fa-external-link-alt"></i></a></td>
     </tr>
     <tr>
-       <td>Ch 3 Vectors</td>
+       <td #section1>Ch 3 Vectors</td>
        <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jSEyenRS007gfyFok2R6T20&si=NPFOUFLWOh4EHXqm"target="_blank"><i class="fas fa-external-link-alt"></i></a></td>
        <td><a href="https://drive.google.com/file/d/1v-A1jVz_zqFHe7mwNUS3ESPBTaWjnjmh/view?usp=drivesdk"target="_blank"><i class="fas fa-external-link-alt"></i></a></td>
        <td><a href="https://drive.google.com/file/d/1unceWzkKeKUF8i4qyITTjjrCEEpz5aTO/view?usp=drivesdk"target="_blank"><i class="fas fa-external-link-alt"></i></a></td>
@@ -357,21 +361,21 @@
 
          <tr><th colspan="5" id="B">Computer Practice [10 Marks]</th></tr>
          <tr>
-         <td colspan="4" id="section">
+         <td colspan="4" id="section2">
              <a href="https://youtu.be/Ut4RpySLM6Y?si=GYyN2wuTnKufG0de&t=200"target="_blank"><i class="fas fa-external-link-alt"></i></a>
          </td>
          </tr>
          <tr><th colspan="5" id="G">Environmental Science [10 Marks]</th></tr>
          <tr>
-         <td colspan="4" id="section">
+         <td colspan="4" id="section3">
              <a href="https://drive.google.com/file/d/1wBU5e_kI6T5gNnf4gZA2ecRVEz-lwbkG/view?usp=drivesdk"target="_blank"><i class="fas fa-external-link-alt"></i></a>
          </td>
          </tr>
 </table>
     <script>
-   // Get the modal and link elements
+ // Get the modal and link elements
 var modal = document.getElementById("myModal");
-var updateLink = document.getElementById("updateLink");
+var updateLinks = document.querySelectorAll(".highlight-link");
 
 // Get the close button
 var span = document.getElementsByClassName("close")[0];
@@ -386,12 +390,14 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks on the link, close the modal and open the link
-updateLink.onclick = function(event) {
-  event.preventDefault(); // Prevent default link behavior
-  modal.style.display = "none";
-  window.location.href = updateLink.href; // Open the link
-}
+// When the user clicks on any link, close the modal and open the link
+updateLinks.forEach(function(updateLink) {
+  updateLink.onclick = function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    modal.style.display = "none";
+    window.location.href = updateLink.href; // Open the link
+  }
+});
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
