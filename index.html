@@ -140,6 +140,23 @@
 .highlighted {
     background-color: rgba(0, 0, 0, 0.462);
   }
+         .modal i{
+    color: #00ff08;
+    margin-left: 30px;
+    animation: fade 1s infinite;
+  }
+  @keyframes fade {
+    0%, 100% {
+       margin-left: 30px;
+    }
+    50% {
+        margin-left: 35px;
+    }
+}
+    #new{
+        color: #00ff08;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
@@ -149,7 +166,7 @@
       <span class="close">&times;</span>
       <h2>Latest Updates</h2>
         <hr>
-     <p>Environmental Science</p>
+     <p>Environmental Science <span id="new"><i class="fas fa-arrow-left"></i> New<span></p>
       <a id="updateLink" href="#section3" class="highlight-link">Click here for details</a>
       <p>Computer Practice</p>
       <a id="updateLink" href="#section2" class="highlight-link">Click here for details</a>
