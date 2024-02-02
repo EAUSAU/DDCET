@@ -511,24 +511,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 // Highlight
-        // color changing
-// Function to continuously change text color between two colors
-function changeColor() {
-  var colors = ["red", "darkblue"]; // Define the two colors
-  var index = 0;
-
-  // Start changing the color continuously
-  setInterval(function() {
-    var color = colors[index];
-    document.getElementById("text").style.color = color;
-    index = (index + 1) % colors.length; // Toggle between the two colors
-  }, 500); // Change color every 500 milliseconds (0.5 seconds)
-}
-
-// Call the changeColor function when the page loads
-window.onload = changeColor;
-
-// colorchanging
 </script>
     
 </body>
