@@ -230,6 +230,19 @@
         document.addEventListener("DOMContentLoaded", function() {
             var progressiveLoads = document.querySelectorAll(".progressive-load");
 
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        loadIframe(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            progressiveLoads.forEach(function(iframe) {
+                observer.observe(iframe);
+            });
+
             function loadIframe(iframe) {
                 if (!iframe.classList.contains("loaded")) {
                     var iframeSrc = iframe.dataset.src;
@@ -240,23 +253,6 @@
                     iframe.classList.add("loaded");
                 }
             }
-
-            function lazyLoadIframes() {
-                progressiveLoads.forEach(function(iframe) {
-                    var rect = iframe.getBoundingClientRect();
-                    if (rect.top < window.innerHeight) {
-                        loadIframe(iframe);
-                    }
-                });
-            }
-
-            // Load initially visible iframes
-            lazyLoadIframes();
-
-            // Load iframes as user scrolls
-            window.addEventListener("scroll", function() {
-                lazyLoadIframes();
-            });
         });
     </script>
 </body>
