@@ -226,19 +226,36 @@
 </tr>
     </table>
 
-   <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var lazyPDFs = document.querySelectorAll(".responsive-pdf-container");
-            lazyPDFs.forEach(function(pdf) {
-                pdf.addEventListener("click", function() {
-                    if (!pdf.classList.contains("loaded")) {
-                        var iframe = document.createElement("iframe");
-                        iframe.src = pdf.dataset.src;
-                        iframe.allow = "autoplay";
-                        pdf.appendChild(iframe);
-                        pdf.classList.add("loaded");
+            var progressiveLoads = document.querySelectorAll(".progressive-load");
+
+            function loadIframe(iframe) {
+                if (!iframe.classList.contains("loaded")) {
+                    var iframeSrc = iframe.dataset.src;
+                    var iframeElement = document.createElement("iframe");
+                    iframeElement.src = iframeSrc;
+                    iframeElement.allow = "autoplay";
+                    iframe.appendChild(iframeElement);
+                    iframe.classList.add("loaded");
+                }
+            }
+
+            function lazyLoadIframes() {
+                progressiveLoads.forEach(function(iframe) {
+                    var rect = iframe.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) {
+                        loadIframe(iframe);
                     }
                 });
+            }
+
+            // Load initially visible iframes
+            lazyLoadIframes();
+
+            // Load iframes as user scrolls
+            window.addEventListener("scroll", function() {
+                lazyLoadIframes();
             });
         });
     </script>
