@@ -230,14 +230,19 @@
         document.addEventListener("DOMContentLoaded", function() {
             var progressiveLoads = document.querySelectorAll(".progressive-load");
 
+            var observerOptions = {
+                root: null, // Use viewport as the root
+                threshold: 1 // Trigger when target is fully visible
+            };
+
             var observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
+                    if (entry.isIntersecting && entry.intersectionRatio === 1) {
                         loadIframe(entry.target);
                         observer.unobserve(entry.target);
                     }
                 });
-            });
+            }, observerOptions);
 
             progressiveLoads.forEach(function(iframe) {
                 observer.observe(iframe);
