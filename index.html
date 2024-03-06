@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b1e903e1a1.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="favicon.jpg" type="image/x-icon">
-   <title>DDCET Notes</title>
-
-   <style>
-  table{
+     <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <title>DDCET</title>
+    <style>
+        table{
             border: 1px solid black;
             text-align: center;
             margin-left: auto;
@@ -23,35 +22,50 @@
         }
         td{
             border: 1px solid black;
-            width: 60rem;
-            height: auto;
+        }
+        i{
+            color: royalblue;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(0, 195, 255);
+             
+        }
+        a:hover{
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
         }
         #M{
             background-color: royalblue;
             color: white;
             font-size: 1.3rem;
         }
-        #MF{
-            background-color: rgba(65, 105, 225, 0.52);
-        }
         #P{
             background-color: #419be1;
             color: white;
             font-size: 1.3rem;
-        }
-        #PF{
-            background-color: #419ce17d;
         }
         #C{
             background-color: #e19141;
             color: white;
             font-size: 1.3rem;
         }
-        #CF{
-            background-color: #e1914182;
+         #S{
+            background-color: #00028a;
+            color: white;
+            font-size: 1.3rem;
         }
-
- nav{
+         #B{
+            background-color: #6da7c8;
+            color: white;
+            font-size: 1.3rem;
+        }
+        #G{
+            background-color: rgb(25, 190, 0);
+            color: white;
+            font-size: 1.3rem;
+        }
+        nav{
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -72,154 +86,481 @@
         div i{
             color: rgb(0, 195, 255);
         }
-        i{
-            color: royalblue;
+        @media only screen and (max-width: 1300px) {
+            nav{
+                font-size: 1rem;
+            }
+            table{
+                font-size: 0.7rem;
+            }
+            div{
+                font-size: 0.7rem;
+            }
+            #new{
+    font-size: 8px;
+}
         }
-        a{
-            text-decoration: none;
-            color: rgb(0, 195, 255);
-             
-        }
-        a:hover{
-            cursor: pointer;
-            text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
-        }
-        .responsive-pdf-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        height: 8rem;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+    
+         /* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  margin-top: -8px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
 
-    .responsive-pdf-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  margin-top: 60px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 82%;
+  color: black;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.highlighted {
+    background-color: rgba(0, 0, 0, 0.462);
+  }
+.modal i{
+    color: #00ff08;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0);
+    animation: fade 1s infinite;
+  }
+  @keyframes fade {
+    0%, 100% {
+       margin-left: 15px;
     }
-    .chap{
-       
-        color: black;
+    50% {
+        margin-left: 20px;
     }
-    .fix{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        height: 30px;
-        width: 30px;
-        background-color: #8c41e1;
-        border-radius: 50%;
-        box-shadow: 0px 0px 13px 3px black;
-        margin-right: 85%;
-        z-index: 2;
-        color: white;
-    }
-    span{
+}
+    #new{
+        color: #00ff08;
         font-weight: bold;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0);
     }
-
-    @media only screen and (max-width: 1300px) {
-        .responsive-pdf-container{
-            height: 15rem;
-        }
+         .reg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+       border-radius: 6px;
+       padding: 2px;
+        width: 140px;
+        height: 35px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background-color: #ffa600;
     }
-   </style>
+    .reg a{
+        text-decoration: none;
+        color: #0a2963;
+    }
+    marquee{
+        margin-top: 10px;
+    }
+    .reg a:hover{
+        text-shadow: none;
+    }
+    marquee{
+        margin-top: 10px;
+    }
+    </style>
 </head>
 <body>
-     <nav id="DN">
-        DDCET Notes 
-        <div class="fix"><a href="#DN">
-            <i class="fa-solid fa-angles-up"></i>
-        </a></div>
+    <!-- Notification -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Latest Updates</h2>
+        <hr>
+        <p>DDCET Registration<span id="new"><i class="fas fa-arrow-left"></i> Open till 11 March 12 PM</span></p>
+      <a id="updateLink" href="#text" class="highlight-link">Register Now</a>
+      <p>Physics Ch 3 Electric Current<span id="new"><i class="fas fa-arrow-left"></i> New</span>
+        <br> MCQ Part 1 & Part 2</p>
+      <a id="updateLink" href="#section1" class="highlight-link">Click here for details</a>
+      <p>Physics Ch 2 Classical Mechanics MCQ</p>
+      <a id="updateLink" href="#section2" class="highlight-link">Click here for details</a>
+    </div>
+</div>
+<!-- Notification -->
+    <nav>DDCET (Diploma to Degree Common Entrance Test)
+        <div>
+           <a href="https://drive.google.com/file/d/1IjIh4jSLLN-teHbPrWyTABetNXE2tvUS/view?usp=sharing" target="_blank">Syllabus 2024 <i class="fas fa-external-link-alt"></i></a>
+        |<a href="https://drive.google.com/file/d/1fZueinQFMSjSdLRWDHY4DKS1NZqLH3yC/view?usp=sharing"target="_blank">GTU Sample Question Paper <i class="fas fa-external-link-alt"></i></a>
     </nav>
-    <table cellspacing="0" cellpadding="3">
-<tr><th colspan="5" id="M">Maths</th></tr>
-<tr>
-    <td id="MF">
-            <span class="chap" id="M1">Ch 1 Determinant & Matrices</span>
-            <div class="responsive-pdf-container"> 
-                <!-- <embed src="https://drive.google.com/file/d/1MAEGcOEBl72OtG4sv_4vx55IMkqTgfKZ/preview" type="application/pdf"> -->
-                    <iframe src="https://drive.google.com/file/d/1MAEGcOEBl72OtG4sv_4vx55IMkqTgfKZ/preview" allow="autoplay"></iframe>
-                </div>
+            <marquee>Registration Date: 6 Feb 2024 1:00 PM to 11 March 2024 12:00 PM | Exam Date: 7 April 2024 <br> Admit Card Download Date: 1 April 2024 to 5 April 2024 | Result Date: 3rd Week of April</marquee>
+   <div class="reg"><a href="https://admissions.nic.in/guj/applicant/root/Home.aspx?enc=yVQCIiq12npg+pcvNJRdc5bxAURPea7iTlqcYBBkprPmS/JT8pC13rgALgDa7Krz" target="_blank"><p id="text">Register Now</p></a></div>
+   <table cellspacing="0" cellpadding="3">
+    <tr><th colspan="5" id="M">Maths [50 Marks]</th></tr>
+    <tr>
+        <th>Chapters</th>
+        <th>Marks</th>
+        <th>Videos</th>
+        <th>Notes</th>
+        <th>Practice Questions</th>
+    </tr>
+   <tr>
+       <td>Ch 1 Determinant & Matrices</td>
+       <td>8</td>
+       <td>
+        <a href="https://youtu.be/hKVyEJLCQEI?si=-MdFel9nA_61h_Yt"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://youtu.be/5c5PsHWR_qo?si=RO7tIeQiP4iU8YSs"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://youtu.be/Yu7p1BpcAU4?si=Mk9i6hZ8PKKr2mun&t=215"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://youtu.be/daEaazHYFd8?si=KIMhDHNxfC5kDI2"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://youtu.be/pYnbNAo2cR8?si=6ZNb9BM7ic8Aa3fM"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://youtu.be/32nsLa1JgNY?si=ydvNXSQKA2cFOY5i"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://youtu.be/mHwp-yg6MrU?si=v5dHS09XFwqpKwWX"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://youtu.be/UB7M_9GXYXs?si=rFQoy5cTZYGH1_v1"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+    </td>
+       <td><a href="DDCET Notes.html#M1"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+       <td>
+        <a href="https://drive.google.com/file/d/1j7gbnLsNvn6AJ56zgt6Q0xhAFq9JGk4l/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+        | <a href="https://www.youtube.com/live/-sYJkL790XM?si=VxyiphI-pKw8mrlQ&t=1663"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+    </td>
+    </tr>
+    <tr>
+       <td>Ch 2 Trigonometry</td>
+       <td>6</td>
+       <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jSEyenRS007gfyFok2R6T20&si=NPFOUFLWOh4EHXqm"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+       <td><a href="DDCET Notes.html#M2"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+       <td>
+        <a href="https://drive.google.com/file/d/15eNW2zlh-z7GaSZJrw9rrrFnsGMbVhHj/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+        | <a href="https://www.youtube.com/live/rBs3laGHlRA?si=GUOM-0DPp0c3LIDd&t=814"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+    </td>
+    </tr>
+    <tr>
+       <td>Ch 3 Vectors</td>
+       <td>4</td>
+       <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jSEyenRS007gfyFok2R6T20&si=NPFOUFLWOh4EHXqm"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+       <td><a href="DDCET Notes.html#M3"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+       <td><a href="https://drive.google.com/file/d/1unceWzkKeKUF8i4qyITTjjrCEEpz5aTO/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+    </tr>
+    <tr>
+        <td>Ch 4 Coordinate Geometry</td>
+        <td>4</td>
+        <td>
+            <a href="https://youtu.be/X2C4JRYaMGw?si=qbBqR38NmPpZ7fiA"target="_blank"><i class="fa-regular fa-circle-play"></i></a> 
+            <a href="https://youtu.be/4g05iJMzpa8?si=-mc93Pd5pW8DHtca"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/xGSBQwTH3jA?si=ke0n_erBhroRsNbm"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        </td>
+        <td><a href="DDCET Notes.html#M4"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td><a href="https://drive.google.com/file/d/12olcqOzPRgBNo28BbnSyxf5gtBw0B53M/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+     </tr>
+     <tr>
+        <td>Ch 5 Function & Limit</td>
+        <td>6</td>
+        <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jSEyenRS007gfyFok2R6T20&si=NPFOUFLWOh4EHXqm"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+        <td><a href="DDCET Notes.html#M5"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td>
+            <a href="https://drive.google.com/file/d/1vfUcovONFUfUaVeirtXgE4l9zgZqJ6KC/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a>
+            | <a href="https://www.youtube.com/live/wxuS0i9bdkM?si=bMDuDdZmUJP9UrPN&t=289"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        </td>
+     </tr>
+     <tr>
+        <td>Ch 6 Differentiation & its Application</td>
+        <td>8</td>
+        <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jSEyenRS007gfyFok2R6T20&si=NPFOUFLWOh4EHXqm"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+        <td><a href="DDCET Notes.html#M6"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td><a href="https://drive.google.com/file/d/1vn6hQ9t5VrcRPHB8sB6aInu3aECQuxrk/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+     </tr>
+     <tr>
+        <td>Ch 7 Integration</td>
+        <td>8</td>
+        <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jSEyenRS007gfyFok2R6T20&si=NPFOUFLWOh4EHXqm"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+        <td><a href="DDCET Notes.html#M7"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td><a href="https://drive.google.com/file/d/1p17zB3GYmxDb8tFXnlSqWxqZVkW5Wqgl/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+     </tr>
+     <tr>
+        <td>Ch 8 Logarithm</td>
+        <td>4</td>
+        <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jSEyenRS007gfyFok2R6T20&si=NPFOUFLWOh4EHXqm"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+        <td><a href="DDCET Notes.html#M8"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td><a href="https://drive.google.com/file/d/1vVyzfR-_qxXeGvAsOgN51_Oy0Y3Rs_VQ/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+     </tr>
+     <tr>
+        <td>Ch 9 Statistics</td>
+        <td>2</td>
+        <td>NA</td>
+        <td><a href="DDCET Notes.html#M9"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td><a href="https://drive.google.com/file/d/1ytPnX1IpNc_wR9KL0sPcliZzNSNyJov8/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+     </tr>
 
-            <span class="chap" id="M2">Ch 2 Trigonometry</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1nQicqlq0qGbnPtTDcj30dwGB2XfKFrxk/preview"  allow="autoplay"></iframe>
-            </div>
 
-            <span class="chap" id="M3">Ch 3 Vectors</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1zwOJ1XddOsRL42Vn0UgOsyn6ZcABuY1p/preview"  allow="autoplay"></iframe>
-            </div>
 
-            <span class="chap" id="M4">Ch 4 Coordinate Geometry</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1lgDrK9Akj-HkqhLhTpM3PWWvNzWEQAIP/preview"  allow="autoplay"></iframe>
-            </div>
+     <tr><th colspan="5" id="P">Physics [60 Marks]</th></tr>
+    <tr>
+        <th>Chapters</th>
+        <th>Marks</th>
+        <th>Videos</th>
+        <th>Notes</th>
+        <th>Practice Questions</th>
+    </tr>
+    <tr>
+       <td>Ch 1 Units & Measurement</td>
+       <td>12</td>
+       <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jT_fFRb76MSqq5zRNoaxKhG&si=BrOU7I0sVLMFbl3_"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+        <td rowspan="5"><a href="DDCET Notes.html#P"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+       <td>
+        <a href="https://drive.google.com/file/d/1V-5V9_IOt6DguUAN4Pw8ymKr3pv2ggR_/view?usp=drive_link"target="_blank"><i class="fa-regular fa-file"></i></a>
+        | <a href="https://www.youtube.com/live/50JRhE9Uxl0?si=O6-0uas_rmSCp-Or&t=355"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+    </td>
+    </tr>
+    <tr>
+       <td>Ch 2 Classical Mechanics</td>
+       <td>12</td>
+       <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jT_fFRb76MSqq5zRNoaxKhG&si=BrOU7I0sVLMFbl3_"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+       <td id="section2">
+        <a href="https://drive.google.com/file/d/1Pua-HHUa8CO9VbyN3bBoHufAeUyuLKl7/view?usp=sharing"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://drive.google.com/file/d/1ecT1vTpGdVAvzFgG8zc-r5rmwDGoGvg2/view?usp=sharing"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        <a href="https://drive.google.com/file/d/1sDjgBqY2HSTFt8ercSlucyoAwhkM-v73/view?usp=sharing"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+       </td>
+    </tr>
+    <tr>
+       <td>Ch 3 Electric Current</td>
+       <td>12</td>
+       <td><a href="https://drive.google.com/file/d/1zZhR4QMFyRCHrVlPC128Gsk1GyQD_8fU/view?usp=sharing"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+       <td id="section1">
+        <a href="https://drive.google.com/file/d/1KF62nKwHcT2rreQgEH_-PHmXG_mLBDYc/view?usp=drive_link"target="_blank"><i class="fa-regular fa-file"></i></a>
+        <a href="https://drive.google.com/file/d/19f4_S2WT4bk0TwvWxWHw7MTJJEHfyJnf/view?usp=drive_link"target="_blank"><i class="fa-regular fa-file"></i></a>
+       </td>
+    </tr>
+    <tr>
+        <td>Ch 4 Heat & Thermometry</td>
+        <td>12</td>
+        <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jT_fFRb76MSqq5zRNoaxKhG&si=BrOU7I0sVLMFbl3_"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+        <td>
+            <a href="https://drive.google.com/file/d/1ajBiIj52Zeomn0gv4RzLeOK1DpWaXdEB/view?usp=drive_link"target="_blank"><i class="fa-regular fa-file"></i></a>
+            | <a href="https://www.youtube.com/live/owTJc2SssSY?si=f4sCZDkh1QtRMFbZ&t=444"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        </td>
+     </tr>
+     <tr>
+        <td>Ch 5 Wave motion, optics & acoustics</td>
+        <td>12</td>
+        <td><a href="https://youtube.com/playlist?list=PL8AiOQITi1jT_fFRb76MSqq5zRNoaxKhG&si=BrOU7I0sVLMFbl3_"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
+        <td><a href="https://drive.google.com/file/d/1EaNChmadqbZ-AVS2um8uM4OxWQaGlfZf/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+     </tr>
+
+     <tr><th colspan="5" id="C">Chemistry [20 Marks]</th></tr>
+     <tr>
+         <th>Chapters</th>
+         <th>Marks</th>
+         <th>NCERT & Videos</th>
+         <th>Notes</th>
+         <th>Practice Questions</th>
+     </tr>
+    <tr>
+        <td>Ch 1 Chemical Reactions & Equations</td>
+        <td>6</td>
+        <td>
+            <a href="https://drive.google.com/file/d/1vWAPiZCwh3y3-PL4PX4ps3fYlwJSiaVU/view?usp=sharing"target="_blank"><i class="fa-solid fa-book"></i></a>
+            | <a href="https://youtu.be/OqJKdx94cDU?si=blmWy9TqGbgHwhJ5"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        </td>
+        <td><a href="DDCET Notes.html#C1"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td>
+            <a href="https://drive.google.com/file/d/1oOEDiyO57kzJmJAv2e87l7h26InsyUB2/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/1pooYaAFCfttU2tMQJCgZEi3imOlmJYKg/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+            
+        </td>
+     </tr>
+     <tr>
+        <td>Ch 2 Acids, Bases & Salts</td>
+        <td>8</td>
+        <td>
+            <a href="https://drive.google.com/file/d/1DFQNhrK4K0ccKaXRC31FOq02JD5KnWlV/view?usp=sharing"target="_blank"><i class="fa-solid fa-book"></i></a>
+            | <a href="https://youtu.be/N3EysFFBUik?si=Zyq5bmf4J_eNnCFc"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        </td>
+        <td><a href="DDCET Notes.html#C2"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td>
+            <a href="https://drive.google.com/file/d/1oMcppr5qkgvHTbkg0raE4HXLe5RGMLsv/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/15GSPMe_IQXEUOkJYkB0fNaVy7N7ehbvw/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+        </td>
+     </tr>
+     <tr>
+        <td>Ch 3 Metals & Non-metals</td>
+        <td>6</td>
+        <td>
+            <a href="https://drive.google.com/file/d/1wPukwregiCl59JSAogsBjfYM-eA-HeNZ/view?usp=sharing"target="_blank"><i class="fa-solid fa-book"></i></a>
+            | <a href="https://youtu.be/ylOgRVINZTY?si=vmk_VM86L_ffymy4"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        </td>
+        <td><a href="DDCET Notes.html#C3"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+        <td>
+            <a href="https://drive.google.com/file/d/1oX-3hvuAGUOUSbUZdwOMGEX_SU2QRp1r/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/1pouXhYsko_P6xgE-uoOqSwymj8CVeWod/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+        </td>
+     </tr>
+
+
+<tr><th colspan="5" id="S">Soft Skill [50 Marks]</th></tr>
+     <tr>
+         <th>Chapters</th>
+         <th>Marks</th>
+         <th colspan="2">Videos</th>
+         <th>Practice Questions</th>
+     </tr>
+     <tr>
+        <td>Ch 1 Comprehension of Unseen Passage</td>
+        <td>10</td>
+        <td colspan="2"><a href="https://youtu.be/ho1Daf0BjpA?si=TEO1Gr4AZaQphooN"target="_blank"><i class="fa-regular fa-circle-play"></i></a></td>
+ <td><a href="https://drive.google.com/file/d/1AbTLn8p6XC6vQD0h0_3U1RUdKxHmBO5C/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a></td>
+     </tr>
+     <tr>
+        <td>Ch 2 Theory of Communication</td>
+        <td>10</td>
+        <td colspan="2">
+            <a href="https://youtube.com/playlist?list=PLPHyUE-VTM4KBWuxtZ8ZFKqKsqr7cwplG&si=5DIrtUaG8mAxPaTv"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a>
+        </td>
+         <td>
+            <a href="https://drive.google.com/file/d/1lPw-87muadLVt0KQa93HnURZc1H690t7/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/1mPenV7FtkqipbCOd19hcpto7i2kiZMxl/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/1IYlvolFAgjZu1EdMUFpooi_GPIkqXL2t/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/1dbYDLKhaF7A732JLmWWbhS7uPS7W-JFu/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+         </td>
+     </tr>
+     <tr>
+        <td>Ch 3 Techniques of Writing</td>
+        <td>10</td>
+        <td colspan="2">
+            <a href="https://youtu.be/W3KI2rJm-Sc?si=t6nbFbHJJPe7Py7E"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/rGrH-IGHS9w?si=OBOde8UQ3wB7zxbX"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/2i5P5t82sbA?si=wR_ZwkZFSrXgAdbW"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/2i5P5t82sbA?si=wR_ZwkZFSrXgAdbW"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/gn0D0DSPyUk?si=VdV_XVK86rm-Iing"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/jHl0gkeaRgc?si=eOpWsUz0PamPFei_"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/wHIpAuMtCwg?si=6fnGzOXgKvwhS4Le"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        </td>
+         <td>
+            <a href="https://drive.google.com/file/d/1Nj1M0TmyIMRUWeZWitRoit-sfCQbJQsZ/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/1ytiT7aLOBClaTytW0xVBFXzoHmvROjZw/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+         </td>
+     </tr>
+     <tr>
+        <td>Ch 4 Grammar</td>
+        <td>10</td>
+        <td colspan="2">
+            <a href="https://youtu.be/zAIt3VbkL6g?si=vSOVNbwX6BGZnxFp"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/pXZtRXpGNck?si=O99TVk7cljZVbjBs"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/zfbUzWqsH74?si=reBa7bpVXg5ouyEs"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtube.com/playlist?list=PLPHyUE-VTM4KBWuxtZ8ZFKqKsqr7cwplG&si=5DIrtUaG8mAxPaTv"target="_blank"><i class="fa-regular fa-rectangle-list"></i></a>
+        </td>
+         <td>
+            <a href="https://drive.google.com/file/d/11YTEs2IlZLvn4dAS6tO9CMW4eW2ibr2O/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/15pmjGGVKR7DtPjfb5wp1cT_trMQTxXgT/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/1tBXTexZwZphv_atejYFZGUu4jjUZ4Vir/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+         </td>
+     </tr>
+     <tr>
+        <td>Ch 5 Correction of Incorrect Words & Sentences</td>
+        <td>10</td>
+        <td colspan="2">
+            <a href="https://youtu.be/xFGUTzBlAP8?si=3ltfxWg7nr-OtGD0"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/XnwVKeTggJQ?si=jREFiL3yUfGKSn-c"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+            <a href="https://youtu.be/Snaho111QzA?si=ucGly8PxibJgVvTh"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+        </td>
+         <td>
+            <a href="https://drive.google.com/file/d/1O7dz4ADt59Auh0sDbbPbCTqXEbDeo-PZ/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+            <a href="https://drive.google.com/file/d/1qWvkqVEc2F4-V_xpp51oXAKJ2EYFguWc/view?usp=sharing"target="_blank"><i class="fa-regular fa-file"></i></a>
+         </td>
+     </tr>
+
+         <tr><th colspan="6" id="B">Computer Practice [10 Marks]</th></tr>
+         <tr>
+         <td colspan="6">
+             <a href="https://youtu.be/Ut4RpySLM6Y?si=GYyN2wuTnKufG0de&t=200"target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+         </td>
+         </tr>
+         <tr><th colspan="6" id="G">Environmental Science [10 Marks]</th></tr>
+         <tr>
+         <td colspan="6">
+             <a href="https://drive.google.com/file/d/1wBU5e_kI6T5gNnf4gZA2ecRVEz-lwbkG/view?usp=drivesdk"target="_blank"><i class="fa-regular fa-file"></i></a>
+         </td>
+         </tr>
+</table>
+    <script>
+ // Get the modal and link elements
+var modal = document.getElementById("myModal");
+var updateLinks = document.querySelectorAll(".highlight-link");
+
+// Get the close button
+var span = document.getElementsByClassName("close")[0];
+
+// When the page loads, display the modal
+window.onload = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks on any link, close the modal and open the link
+updateLinks.forEach(function(updateLink) {
+  updateLink.onclick = function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    modal.style.display = "none";
+    window.location.href = updateLink.href; // Open the link
+  }
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+        // Highlight
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.highlight-link');
+  
+  links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      var targetId = link.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        // Remove highlight from all elements
+        document.querySelectorAll('.highlighted').forEach(function(el) {
+          el.classList.remove('highlighted');
+        });
         
-            <span class="chap" id="M5">Ch 5 Function & Limit</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/10B1bsJ_UFmvKj0qaqgYy2w2UWtHIC5-d/preview"  allow="autoplay"></iframe>
-            </div>
-
-            <span class="chap" id="M6">Ch 6 Differentiation & Its Application</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1Pi1L7Rw7ZHqek9e8kqvnB4NDbllPRgyL/preview"  allow="autoplay"></iframe>
-            </div>
-
-            <span class="chap" id="M7">Ch 7 Integration</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1t4_msX-Ay1a0maulEWK_WY4Vv5m5ietn/preview"  allow="autoplay"></iframe>
-            </div>
-
-            <span class="chap" id="M8">Ch 8 Logarithm</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1wXkLe1uTys1ZtxUKEjVas8XsMShQZM3b/preview"  allow="autoplay"></iframe>
-            </div>
-
-            <span class="chap" id="M9">Ch 9 Statistics</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1R__zVyYMMSnckdyhGiOxI45iPO5qyRnC/preview"  allow="autoplay"></iframe>
-            </div>
-    </td>
-</tr>
-
-<tr><th colspan="5" id="P">Physics</th></tr>
-<tr>
-    <td id="PF">
-       
-            <div class="responsive-pdf-container"> 
-                <iframe src="https://drive.google.com/file/d/1zZhR4QMFyRCHrVlPC128Gsk1GyQD_8fU/preview"  allow="autoplay"></iframe>
-            </div>
-    </td>
-</tr>
-
-<tr><th colspan="5" id="C">Chemistry</th></tr>
-<tr>
-    <td id="CF">
-        <span class="chap" id="C1">Ch 1 Chemical Reactions & Equations</span>
-        <div class="responsive-pdf-container">
-            <iframe src="https://drive.google.com/file/d/1o1_SOwdHQrGszCH8XMLd5enaOZ0zdbz3/preview"  allow="autoplay"></iframe>
-        </div>
-
-        <span class="chap" id="C2">Ch 2 Acids, Bases & Salts</span>
-        <div class="responsive-pdf-container">
-            <iframe src="https://drive.google.com/file/d/1RyuQjct_AOVGJQtkggEBeSb6vjw-deYh/preview"  allow="autoplay"></iframe>
-        </div>
-
-        <span class="chap" id="C3">Ch 3 Metals & Non-metals</span>
-        <div class="responsive-pdf-container">
-            <iframe src="https://drive.google.com/file/d/1T5mjBv3go6xxrnFQThxMmmIPv5fckdHi/preview"  allow="autoplay"></iframe>
-        </div>
-    </td>
-</tr>
-    </table>
+        // Highlight the target element
+        targetElement.classList.add('highlighted');
+        
+        // Remove highlight after 3 seconds (2000 milliseconds)
+        setTimeout(function() {
+          targetElement.classList.remove('highlighted');
+        }, 2000);
+        
+        // Optionally, scroll to the target element
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
+// Highlight
+</script>
+    
 </body>
 </html>
