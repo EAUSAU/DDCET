@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b1e903e1a1.js" crossorigin="anonymous"></script>
     <link rel="icon" href="favicon.jpg" type="image/x-icon">
-   <title>DDCET Notes</title>
+    <title>DDCET Notes</title>
 
-   <style>
-    body{
-        padding: 0%;
-        margin: 0%;
-    }
-  table{
+    <style>
+        body {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        table {
             border: 1px solid black;
             text-align: center;
             margin-left: auto;
@@ -21,41 +23,49 @@
             margin-bottom: 80px;
             font-size: 1.3rem;
         }
-        th{
+
+        th {
             text-align: center;
             border: 1px solid black;
         }
-        td{
+
+        td {
             border: 1px solid black;
             width: 60rem;
             height: auto;
         }
-        #M{
+
+        #M {
             background-color: royalblue;
             color: white;
             font-size: 1.3rem;
         }
-        #MF{
+
+        #MF {
             background-color: rgba(65, 105, 225, 0.52);
         }
-        #P{
+
+        #P {
             background-color: #419be1;
             color: white;
             font-size: 1.3rem;
         }
-        #PF{
+
+        #PF {
             background-color: #419ce17d;
         }
-        #C{
+
+        #C {
             background-color: #e19141;
             color: white;
             font-size: 1.3rem;
         }
-        #CF{
+
+        #CF {
             background-color: #e1914182;
         }
 
- nav{
+        nav {
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -68,165 +78,195 @@
             text-align: center;
             color: white;
         }
-        div{
+
+        div {
             font-size: 1.3rem;
             color: rgb(255, 255, 255);
             margin-top: 5px;
         }
-        div i{
+
+        div i {
             color: rgb(0, 195, 255);
         }
-        i{
+
+        i {
             color: royalblue;
         }
-        a{
+
+        a {
             text-decoration: none;
             color: rgb(0, 195, 255);
-             
+
         }
-        a:hover{
+
+        a:hover {
             cursor: pointer;
             text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
         }
-        .responsive-pdf-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        height: 8rem;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
 
-    .responsive-pdf-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .chap{
-       
-        color: black;
-    }
-    .fix{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        height: 30px;
-        width: 30px;
-        background-color: #8c41e1;
-        border-radius: 50%;
-        box-shadow: 0px 0px 13px 3px black;
-        margin-right: 85%;
-        z-index: 2;
-        color: white;
-    }
-    span{
-        font-weight: bold;
-    }
-   
-    @media only screen and (max-width: 1300px) {
-        .responsive-pdf-container{
-            height: 17rem;
+        .responsive-pdf-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            height: 8rem;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
-    }
-   </style>
+
+        .responsive-pdf-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .chap {
+
+            color: black;
+        }
+
+        .fix {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            height: 30px;
+            width: 30px;
+            background-color: #8c41e1;
+            border-radius: 50%;
+            box-shadow: 0px 0px 13px 3px black;
+            margin-right: 85%;
+            z-index: 2;
+            color: white;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 1300px) {
+            .responsive-pdf-container {
+                height: 17rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-     <nav id="DN">
-        DDCET Notes 
+    <nav id="DN">
+        DDCET Notes
         <div class="fix"><a href="#DN">
-            <i class="fa-solid fa-angles-up"></i>
-        </a></div>
+                <i class="fa-solid fa-angles-up"></i>
+            </a></div>
     </nav>
     </div>
     <table cellspacing="0" cellpadding="3">
-<tr><th colspan="5" id="M">Maths</th></tr>
-<tr>
-    <td id="MF">
-            <span class="chap" id="M1">Ch 1 Determinant & Matrices</span>
-            <div class="responsive-pdf-container"> 
-                    <iframe src="https://drive.google.com/file/d/1MAEGcOEBl72OtG4sv_4vx55IMkqTgfKZ/preview" allow="autoplay"></iframe>
+        <tr>
+            <th colspan="5" id="M">Maths</th>
+        </tr>
+        <tr>
+            <td id="MF">
+                <span class="chap" id="M1">Ch 1 Determinant & Matrices</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1MAEGcOEBl72OtG4sv_4vx55IMkqTgfKZ/preview"
+                        allow="autoplay"></iframe>
                 </div>
 
-            <span class="chap" id="M2">Ch 2 Trigonometry</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1nOyTzWeBQhVhE4PSFzdgXbogbPXADpqN/preview"  allow="autoplay"></iframe>
-            </div>
+                <span class="chap" id="M2">Ch 2 Trigonometry</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1nOyTzWeBQhVhE4PSFzdgXbogbPXADpqN/preview"
+                        allow="autoplay"></iframe>
+                </div>
 
-            <span class="chap" id="M3">Ch 3 Vectors</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1Zx7cvAQw2h1S1j4Bw596DnNh2Hu-sjvL/preview"  allow="autoplay"></iframe>
-            </div>
+                <span class="chap" id="M3">Ch 3 Vectors</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1Zx7cvAQw2h1S1j4Bw596DnNh2Hu-sjvL/preview"
+                        allow="autoplay"></iframe>
+                </div>
 
-            <span class="chap" id="M4">Ch 4 Coordinate Geometry</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/10FYBhOk3ZxpkbazvJatYpMkIAzBFof5A/preview"  allow="autoplay"></iframe>
-            </div>
-        
-            <span class="chap" id="M5">Ch 5 Function & Limit</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1mQBDBf_nDLMLstg6ioyxx30A079EaTRy/preview"  allow="autoplay"></iframe>
-            </div>
+                <span class="chap" id="M4">Ch 4 Coordinate Geometry</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/10FYBhOk3ZxpkbazvJatYpMkIAzBFof5A/preview"
+                        allow="autoplay"></iframe>
+                </div>
 
-            <span class="chap" id="M6">Ch 6 Differentiation & Its Application</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/172_TEMZB3YN_GW87pDdfWRj-C3XmuQLv/preview"  allow="autoplay"></iframe>
-            </div>
+                <span class="chap" id="M5">Ch 5 Function & Limit</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1mQBDBf_nDLMLstg6ioyxx30A079EaTRy/preview"
+                        allow="autoplay"></iframe>
+                </div>
 
-            <span class="chap" id="M7">Ch 7 Integration</span>
-            <div class="responsive-pdf-container">
-               <iframe src="https://drive.google.com/file/d/1o9QK8YRS_Emg_ZX98_4ylJ3MlOmRQ389/preview"  allow="autoplay"></iframe>
-            </div>
+                <span class="chap" id="M6">Ch 6 Differentiation & Its Application</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/172_TEMZB3YN_GW87pDdfWRj-C3XmuQLv/preview"
+                        allow="autoplay"></iframe>
+                </div>
 
-            <span class="chap" id="M8">Ch 8 Logarithm</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1J4ORwnkulFQjF4nutGAm0Qb48h4JDlZC/preview"  allow="autoplay"></iframe>
-            </div>
+                <span class="chap" id="M7">Ch 7 Integration</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1o9QK8YRS_Emg_ZX98_4ylJ3MlOmRQ389/preview"
+                        allow="autoplay"></iframe>
+                </div>
 
-            <span class="chap" id="M9">Ch 9 Statistics</span>
-            <div class="responsive-pdf-container">
-                <iframe src="https://drive.google.com/file/d/1ESVHq6Uw6OLlj43bAbbpA4tvyk6vpxE9/preview"  allow="autoplay"></iframe>
-            </div>
-    </td>
-</tr>
+                <span class="chap" id="M8">Ch 8 Logarithm</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1J4ORwnkulFQjF4nutGAm0Qb48h4JDlZC/preview"
+                        allow="autoplay"></iframe>
+                </div>
 
-<tr><th colspan="5" id="P">Physics</th></tr>
-<tr>
-    <td id="PF">
-       
-            <div class="responsive-pdf-container"> 
-                <iframe src="https://drive.google.com/file/d/1_b5ioP2eS4JvzQssykAHo1ZTNZIJepMF/preview"  allow="autoplay"></iframe>
-            </div>
-    </td>
-</tr>
+                <span class="chap" id="M9">Ch 9 Statistics</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1ESVHq6Uw6OLlj43bAbbpA4tvyk6vpxE9/preview"
+                        allow="autoplay"></iframe>
+                </div>
+            </td>
+        </tr>
 
-<tr><th colspan="5" id="C">Chemistry</th></tr>
-<tr>
-    <td id="CF">
-        <span class="chap" id="C1">Ch 1 Chemical Reactions & Equations</span>
-        <div class="responsive-pdf-container">
-            <iframe src="https://drive.google.com/file/d/1ZOznpprUdABIhPmqcqvLmLlzzkmWHxCW/preview"  allow="autoplay"></iframe>
-        </div>
+        <tr>
+            <th colspan="5" id="P">Physics</th>
+        </tr>
+        <tr>
+            <td id="PF">
 
-        <span class="chap" id="C2">Ch 2 Acids, Bases & Salts</span>
-        <div class="responsive-pdf-container">
-            <iframe src="https://drive.google.com/file/d/1gLhNtAB8T0TtcILpdDtQBje9qHgQcVpq/preview"  allow="autoplay"></iframe>
-        </div>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1_b5ioP2eS4JvzQssykAHo1ZTNZIJepMF/preview"
+                        allow="autoplay"></iframe>
+                </div>
+            </td>
+        </tr>
 
-        <span class="chap" id="C3">Ch 3 Metals & Non-metals</span>
-        <div class="responsive-pdf-container">
-            <iframe src="https://drive.google.com/file/d/1JmzMurAEG7zUEELKYYWbFqnD0D-3MkJ-/preview"  allow="autoplay"></iframe>
-        </div>
-    </td>
-</tr>
+        <tr>
+            <th colspan="5" id="C">Chemistry</th>
+        </tr>
+        <tr>
+            <td id="CF">
+                <span class="chap" id="C1">Ch 1 Chemical Reactions & Equations</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1ZOznpprUdABIhPmqcqvLmLlzzkmWHxCW/preview"
+                        allow="autoplay"></iframe>
+                </div>
+
+                <span class="chap" id="C2">Ch 2 Acids, Bases & Salts</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1gLhNtAB8T0TtcILpdDtQBje9qHgQcVpq/preview"
+                        allow="autoplay"></iframe>
+                </div>
+
+                <span class="chap" id="C3">Ch 3 Metals & Non-metals</span>
+                <div class="responsive-pdf-container">
+                    <iframe src="https://drive.google.com/file/d/1JmzMurAEG7zUEELKYYWbFqnD0D-3MkJ-/preview"
+                        allow="autoplay"></iframe>
+                </div>
+            </td>
+        </tr>
     </table>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var progressiveLoads = document.querySelectorAll(".progressive-load");
 
             var observerOptions = {
@@ -234,8 +274,8 @@
                 threshold: 1 // Trigger when target is fully visible
             };
 
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
                     if (entry.isIntersecting && entry.intersectionRatio === 1) {
                         loadIframe(entry.target);
                         observer.unobserve(entry.target);
@@ -243,7 +283,7 @@
                 });
             }, observerOptions);
 
-            progressiveLoads.forEach(function(iframe) {
+            progressiveLoads.forEach(function (iframe) {
                 observer.observe(iframe);
             });
 
@@ -258,10 +298,11 @@
                 }
             }
         });
-         document.addEventListener("DOMContentLoaded", function() {
+
+        document.addEventListener("DOMContentLoaded", function () {
             var lazyPDFs = document.querySelectorAll(".responsive-pdf-container");
-            lazyPDFs.forEach(function(pdf) {
-                pdf.addEventListener("click", function() {
+            lazyPDFs.forEach(function (pdf) {
+                pdf.addEventListener("click", function () {
                     if (!pdf.classList.contains("loaded")) {
                         var iframe = document.createElement("iframe");
                         iframe.src = pdf.dataset.src;
@@ -274,4 +315,5 @@
         });
     </script>
 </body>
+
 </html>
