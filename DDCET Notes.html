@@ -259,19 +259,18 @@
             }
         });
          document.addEventListener("DOMContentLoaded", function() {
-            var pdfIframe = document.getElementById("pdf-iframe");
-            var originalUrl = "https://drive.google.com/file/d/1MAEGcOEBl72OtG4sv_4vx55IMkqTgfKZ/preview"; // Original PDF URL
-            var reducedResolutionUrl = reducePDFResolution(originalUrl); // Function to reduce resolution
-
-            // Set the iframe src to the reduced resolution PDF URL
-            pdfIframe.src = reducedResolutionUrl;
-
-            function reducePDFResolution(originalUrl) {
-                // Reduce resolution logic here (replace with your implementation)
-                // Example: Append parameter to URL to load a lower-resolution version
-                var reducedUrl = originalUrl + "?resolution=low";
-                return reducedUrl;
-            }
+            var lazyPDFs = document.querySelectorAll(".responsive-pdf-container");
+            lazyPDFs.forEach(function(pdf) {
+                pdf.addEventListener("click", function() {
+                    if (!pdf.classList.contains("loaded")) {
+                        var iframe = document.createElement("iframe");
+                        iframe.src = pdf.dataset.src;
+                        iframe.allow = "autoplay";
+                        pdf.appendChild(iframe);
+                        pdf.classList.add("loaded");
+                    }
+                });
+            });
         });
     </script>
 </body>
