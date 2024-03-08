@@ -12,7 +12,7 @@
             text-align: center;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 30px;
+            margin-top: 53px;
             margin-bottom: 80px;
             font-size: 1.3rem;
         }
@@ -185,9 +185,33 @@
     marquee{
         margin-top: 10px;
     }
+
+    #notification-icon {
+            position: absolute;
+            top: 12.2rem;
+            left: 49%;
+            height: auto;
+            width: auto;
+        }
+        #notification-icon i{
+          color: rgb(255, 0, 0);
+          font-size: 1.5rem;
+        }
+
+        #notification-counter {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 0px 4px;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
+   
     <!-- Notification -->
 <div id="myModal" class="modal">
     <div class="modal-content">
@@ -207,7 +231,15 @@
     <nav>DDCET (Diploma to Degree Common Entrance Test)
         <div>
            <a href="https://drive.google.com/file/d/1IjIh4jSLLN-teHbPrWyTABetNXE2tvUS/view?usp=sharing" target="_blank">Syllabus 2024 <i class="fas fa-external-link-alt"></i></a>
-        |<a href="https://drive.google.com/file/d/1fZueinQFMSjSdLRWDHY4DKS1NZqLH3yC/view?usp=sharing"target="_blank">GTU Sample Question Paper <i class="fas fa-external-link-alt"></i></a>
+        |<a href="https://drive.google.com/file/d/1fZueinQFMSjSdLRWDHY4DKS1NZqLH3yC/view?usp=sharing"target="_blank"> GTU Sample Question Paper <i class="fas fa-external-link-alt"></i></a>
+        <br>
+        <div id="notification-icon" >
+            <a href="#" onclick="showNotifications()">
+                <i class="fa-regular fa-bell fa-shake"></i><!-- Bell icon -->
+                <span id="notification-counter">3</span> <!-- Counter -->
+            </a>
+        </div>
+        </div>
     </nav>
             <marquee>Registration Date: 6 Feb 2024 1:00 PM to 11 March 2024 12:00 PM | Exam Date: 7 April 2024 <br> Admit Card Download Date: 1 April 2024 to 5 April 2024 | Result Date: 3rd Week of April</marquee>
    <div class="reg"><a href="https://admissions.nic.in/guj/applicant/root/Home.aspx?enc=yVQCIiq12npg+pcvNJRdc5bxAURPea7iTlqcYBBkprPmS/JT8pC13rgALgDa7Krz" target="_blank"><p id="text">Register Now</p></a></div>
@@ -497,6 +529,14 @@
          </tr>
 </table>
     <script>
+
+// JavaScript to handle notifications 
+        function showNotifications() {
+            // Display the modal with ID "myModal"
+            var modal = document.getElementById('myModal');
+            modal.style.display = "block";
+        }
+
  // Get the modal and link elements
 var modal = document.getElementById("myModal");
 var updateLinks = document.querySelectorAll(".highlight-link");
@@ -561,6 +601,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // Highlight
 </script>
-    
 </body>
 </html>
