@@ -13,7 +13,7 @@
             text-align: center;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 53px;
+            margin-top: 35px;
             margin-bottom: 80px;
             font-size: 1.3rem;
         }
@@ -118,7 +118,7 @@
             #new {
                 font-size: 8px;
             }
-        }
+    }
 
         /* Modal styles */
         .modal {
@@ -218,15 +218,20 @@
         }
 
         #notification-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: absolute;
-            top: 12.2rem;
-            left: 49%;
-            height: auto;
-            width: auto;
+            top: 9.1rem;
+            left: 80%;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: rgb(255, 0, 0);
         }
 
         #notification-icon i {
-            color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
             font-size: 1.5rem;
         }
 
@@ -268,12 +273,13 @@
                 target="_blank">Syllabus 2024 <i class="fas fa-external-link-alt"></i></a>
             |<a href="https://drive.google.com/file/d/1fZueinQFMSjSdLRWDHY4DKS1NZqLH3yC/view?usp=sharing"
                 target="_blank"> GTU Sample Question Paper <i class="fas fa-external-link-alt"></i></a>
-            <div id="notification-icon">
+
+                <div id="notification-icon">
                 <a href="#" onclick="showNotifications()">
                     <i class="fa-regular fa-bell fa-shake"></i><!-- Bell icon -->
                     <span id="notification-counter">3</span> <!-- Counter -->
                 </a>
-            </div>
+               </div>
         </div>
     </nav>
     <marquee>Registration Date: 6 Feb 2024 1:00 PM to 11 March 2024 12:00 PM | Exam Date: 7 April 2024 <br> Admit Card
