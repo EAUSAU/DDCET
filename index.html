@@ -236,11 +236,16 @@
         }
 
         #notification-counter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: absolute;
             top: -8px;
             right: -10px;
             background-color: red;
             color: white;
+            height: auto;
+            width: auto;
             border-radius: 50%;
             padding: 0px 4px;
             font-size: 12px;
@@ -256,14 +261,22 @@
             <span class="close">&times;</span>
             <h2>Latest Updates</h2>
             <hr>
-             <!-- <p>Admit Card<span id="new"><i class="fas fa-arrow-left"></i> Open till 5th April</span></p>
+             <!-- <p>&#8226; Admit Card<span id="new"><i class="fas fa-arrow-left"></i> Open till 5th April</span></p>
             <a id="updateLink" href="#text" class="highlight-link">Download Now</a>   -->
-            <p>DDCET 2024 Registration<span style="color: red; margin-left: 20px;">Closed</span></p> 
-            <p>Physics Ch 3 Electric Current
+            <p>&#8226; DDCET 2024 Registration<span style="color: red; margin-left: 20px;">Closed</span></p> 
+            <!-- <p>&#8226; Physics Ch 3 Electric Current<span id="new"><i class="fas fa-arrow-left"></i> New</span>
+                <br> MCQ Part 4
+            </p>
+            <a id="updateLink" href="#section4" class="highlight-link">Click here for details</a> -->
+            <p>&#8226; Physics Ch 3 Electric Current<span id="new"><i class="fas fa-arrow-left"></i> New</span>
+                <br> MCQ Part 3
+            </p>
+            <a id="updateLink" href="#section3" class="highlight-link">Click here for details</a>
+            <p>&#8226; Physics Ch 3 Electric Current
                 <br> MCQ Part 1 & Part 2
             </p>
             <a id="updateLink" href="#section1" class="highlight-link">Click here for details</a>
-            <p>Physics Ch 2 Classical Mechanics MCQ</p>
+            <p>&#8226; Physics Ch 2 Classical Mechanics MCQ</p>
             <a id="updateLink" href="#section2" class="highlight-link">Click here for details</a>
         </div>
     </div>
@@ -278,7 +291,7 @@
             <div id="notification-icon">
                 <a href="#" onclick="showNotifications()">
                     <i class="fa-regular fa-bell fa-shake"></i><!-- Bell icon -->
-                    <span id="notification-counter">3</span> <!-- Counter -->
+                    <span id="notification-counter">4</span> <!-- Counter -->
                 </a>
             </div>
         </div>
@@ -472,10 +485,10 @@
             <td><a href="https://drive.google.com/file/d/1zZhR4QMFyRCHrVlPC128Gsk1GyQD_8fU/view?usp=sharing"
                     target="_blank"><i class="fa-regular fa-rectangle-list"></i></a></td>
             <td id="section1">
-                <a href="https://drive.google.com/file/d/1KF62nKwHcT2rreQgEH_-PHmXG_mLBDYc/view?usp=drive_link"
-                    target="_blank"><i class="fa-regular fa-file"></i></a>
-                <a href="https://drive.google.com/file/d/19f4_S2WT4bk0TwvWxWHw7MTJJEHfyJnf/view?usp=drive_link"
-                    target="_blank"><i class="fa-regular fa-file"></i></a>
+                <a href="https://drive.google.com/file/d/1KF62nKwHcT2rreQgEH_-PHmXG_mLBDYc/view?usp=drive_link"target="_blank"><i class="fa-regular fa-file"></i></a>
+                <a href="https://drive.google.com/file/d/19f4_S2WT4bk0TwvWxWHw7MTJJEHfyJnf/view?usp=drive_link"target="_blank"><i class="fa-regular fa-file"></i></a>
+                <a id="section3" href=""target="_blank"><i class="fa-regular fa-file"></i></a>
+                <!-- <a id="section4" href=""target="_blank"><i class="fa-regular fa-file"></i></a> -->
             </td>
         </tr>
         <tr>
