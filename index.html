@@ -74,6 +74,11 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -962,6 +967,29 @@
     <script>
         // Define an array of questions and their correct answers
         var questions = [
+            // set2
+            {
+                question: "Find dy/dx if x = sin t, y = cos t",
+                options: ["A) Sin t", "B) - tan t", "C) Cot t", "D) cos t"],
+                correctAnswer: "B) - tan t"
+            },
+            {
+                question: "Find the period for tan 5x",
+                options: ["A) 2π/5 rad", "B) π/5 rad", "C) 36°", "D) Both B and C"],
+                correctAnswer: "D) Both B and C"
+            },
+            {
+                question: "Find the value: <br> <img src='Limit1.png'>",
+                options: ["A) 12", "B) 0", "C) 11", "D) None"],
+                correctAnswer: "A) 12"
+            },
+            {
+                question: "Find the value: <br> <img src='Def1.png'>",
+                options: ["A) x", "B) X²", "C) <img src='Def1a.png'class='Def1a'>", "D) None"],
+                correctAnswer: "C) <img src='Def1a.png'class='Def1a'>"
+            },
+
+            // set1
             {
                 question: "what is ∫log x dx ?",
                 options: ["A) 1/x + c", "B) x (log x + 1) + c", "C) 0 + c", "D) log x + c"],
