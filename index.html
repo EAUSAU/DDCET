@@ -76,10 +76,14 @@
             cursor: pointer;
         }
 
-        img {
+        #Dance {
             max-width: 100%;
             height: auto;
-             filter: contrast(1.1);
+            filter: contrast(1.1);
+            margin-bottom: 10px;
+            margin-top: -30px;
+            height: auto;
+            width: 5rem;
         }
     </style>
 </head>
@@ -91,8 +95,8 @@
     </div>
 
     <div id="access-denied" style="display: none;">
-       <p>Kya re itna simple question nai aya tere ko, Chal ab dekh kya rha hai, retry mar</p>
-        <br><img src="Dance.gif" style="height: auto;width: 5rem; margin-top: -30px;">
+        <p>Kya re itna simple question nai aya tere ko, Chal ab dekh kya rha hai, retry mar</p>
+        <br><img id="Dance" src="Dance.gif">
         <button id="retry" onclick="refreshPage()">Retry</button>
     </div>
     <div id="access-granted">
@@ -363,10 +367,7 @@
                     <span class="close">&times;</span>
                     <h2>Latest Updates</h2>
                     <hr>
-                    <p>&#8226; DDCET Registration<span id="new"><i class="fas fa-arrow-left"></i> Open till 22 March 11
-                            PM</span></p>
-                    <a id="updateLink" href="#text" class="highlight-link">Register Now</a>
-                    <!-- <p>&#8226; DDCET 2024 Registration<span style="color: red; margin-left: 20px;">Closed</span></p>  -->
+                    <p>&#8226; DDCET 2024 Registration<span style="color: red; margin-left: 20px;">Closed</span></p>
                     <p>&#8226; DDCET Sample Paper Solution<span id="new"><i class="fas fa-arrow-left"></i> New</span>
                         <br>Physics | Chemistry | Basic of
                         <br>Engineering | Soft Skills
@@ -411,7 +412,7 @@
             <div class="reg"><a
                     href="https://admissions.nic.in/guj/applicant/root/Home.aspx?enc=yVQCIiq12npg+pcvNJRdc5bxAURPea7iTlqcYBBkprPmS/JT8pC13rgALgDa7Krz"
                     target="_blank">
-                    <p id="text">Register Now</p>
+                    <p id="text">Admit Card</p>
                 </a></div>
             <div id="notification-icon">
                 <a href="#" onclick="showNotifications()">
