@@ -1266,6 +1266,9 @@
         // Get a reference to the audio element
         const audioElement = document.getElementById('myAudio');
 
+         // Set the volume to 20% (0.2)
+    audioElement.volume = 0.2;
+        
         // Function to check the display property and play audio if it's "block"
         function checkDisplayAndPlayAudio() {
             if (window.getComputedStyle(accessDeniedDiv).display === 'block') {
