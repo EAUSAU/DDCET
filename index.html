@@ -99,6 +99,9 @@
         <br><img id="Dance" src="Dance.gif">
         <button id="retry" onclick="refreshPage()">Retry</button>
     </div>
+    <audio id="myAudio" src="Moye_Moye.mp3" autoplay>
+        Your browser does not support the audio element.
+    </audio>
     <div id="access-granted">
         <!DOCTYPE html>
         <html lang="en">
@@ -1255,6 +1258,30 @@
         window.onload = function () {
             displayRandomQuestion();
         };
+
+
+        // Get a reference to the div
+        const accessDeniedDiv = document.getElementById('access-denied');
+
+        // Get a reference to the audio element
+        const audioElement = document.getElementById('myAudio');
+
+        // Function to check the display property and play audio if it's "block"
+        function checkDisplayAndPlayAudio() {
+            if (window.getComputedStyle(accessDeniedDiv).display === 'block') {
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
+        }
+
+        // Listen for changes in the display property
+        const observer = new MutationObserver(checkDisplayAndPlayAudio);
+        observer.observe(accessDeniedDiv, { attributes: true, attributeFilter: ['style'] });
+
+        // Call the function initially to check the display property
+        checkDisplayAndPlayAudio();
+
     </script>
 
 </body>
