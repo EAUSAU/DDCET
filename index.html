@@ -96,10 +96,7 @@
 
     <div id="access-denied" style="display: none;">
         <h1>Access denied</h1>
-        <p>Kya re itna simple question nai aya tere ko, Chal ab dekh kya rha hai, retry mar</p>
-        <br><img id="Dance" src="Dance.gif">
-        <audio id="myAudio" src="Moye_Moye.mp3" autoplay> </audio>
-        <!-- <p>The answer is incorrect, Your access to website is denied, Retry to access website</p> -->
+        <p>Your answer is incorrect, retry to access the website</p>
         <button id="retry" onclick="refreshPage()">Retry</button>
     </div>
 
@@ -1357,32 +1354,6 @@
         window.onload = function () {
             displayRandomQuestion();
         };
-
-
-        // Get a reference to the div
-        const accessDeniedDiv = document.getElementById('access-denied');
-
-        // Get a reference to the audio element
-        const audioElement = document.getElementById('myAudio');
-
-        // Set the volume to 50% (0.5)
-        audioElement.volume = 0.5;
-
-        // Function to check the display property and play audio if it's "block"
-        function checkDisplayAndPlayAudio() {
-            if (window.getComputedStyle(accessDeniedDiv).display === 'block') {
-                audioElement.play();
-            } else {
-                audioElement.pause();
-            }
-        }
-
-        // Listen for changes in the display property
-        const observer = new MutationObserver(checkDisplayAndPlayAudio);
-        observer.observe(accessDeniedDiv, { attributes: true, attributeFilter: ['style'] });
-
-        // Call the function initially to check the display property
-        checkDisplayAndPlayAudio();
 
     </script>
 
