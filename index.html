@@ -95,13 +95,14 @@
     </div>
 
     <div id="access-denied" style="display: none;">
-       <h1>Access denied</h1>
+        <h1>Access denied</h1>
         <p>Kya re itna simple question nai aya tere ko, Chal ab dekh kya rha hai, retry mar</p>
         <br><img id="Dance" src="Dance.gif">
-        <audio id="myAudio" src="Moye_Moye.mp3" autoplay></audio>
+        <audio id="myAudio" src="Moye_Moye.mp3" autoplay> </audio>
         <!-- <p>The answer is incorrect, Your access to website is denied, Retry to access website</p> -->
         <button id="retry" onclick="refreshPage()">Retry</button>
     </div>
+
     <div id="access-granted">
         <!DOCTYPE html>
         <html lang="en">
@@ -371,6 +372,10 @@
                     <h2>Latest Updates</h2>
                     <hr>
                     <p>&#8226; DDCET 2024 Registration<span style="color: red; margin-left: 20px;">Closed</span></p>
+                    <p>&#8226; Maths Ch 2 Trigonometry<span id="new"><i class="fas fa-arrow-left"></i> New</span>
+                        <br>Extra Questions
+                    </p>
+                    <a id="updateLink" href="#section8" class="highlight-link">Click here for details</a>
                     <p>&#8226; DDCET Sample Paper Solution<span id="new"><i class="fas fa-arrow-left"></i> New</span>
                         <br>Physics | Chemistry | Basic of
                         <br>Engineering | Soft Skills
@@ -380,8 +385,7 @@
                         <br>Measurement MCQ <br>Part 1, 2, 3 & 4
                     </p>
                     <a id="updateLink" href="#section4" class="highlight-link">Click here for details</a>
-                    <p>&#8226; Physics Ch 4 Heat & Thermometry<span id="new"><i class="fas fa-arrow-left"></i>
-                            New</span>
+                    <p>&#8226; Physics Ch 4 Heat & Thermometry
                         <br>MCQs Part 1 & 2
                     </p>
                     <a id="updateLink" href="#section7" class="highlight-link">Click here for details</a>
@@ -420,7 +424,7 @@
             <div id="notification-icon">
                 <a href="#" onclick="showNotifications()">
                     <i class="fa-regular fa-bell fa-shake"></i><!-- Bell icon -->
-                    <span id="notification-counter">7</span> <!-- Counter -->
+                    <span id="notification-counter">8</span> <!-- Counter -->
                 </a>
             </div>
             <table cellspacing="0" cellpadding="6" style="margin-bottom:-10px; margin-top: 20px;">
@@ -505,6 +509,9 @@
                             target="_blank"><i class="fa-regular fa-file"></i></a>
                         <a href="https://www.youtube.com/live/rBs3laGHlRA?si=GUOM-0DPp0c3LIDd&t=814" target="_blank"><i
                                 class="fa-regular fa-circle-play"></i></a>
+                        | <a id="section8"
+                            href="https://drive.google.com/file/d/1Me46h2adJ4-E6X4LndH4pE1FFuyrDKXg/view?usp=sharing"
+                            target="_blank"><i class="fa-regular fa-file"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -1274,9 +1281,9 @@
         // Get a reference to the audio element
         const audioElement = document.getElementById('myAudio');
 
-         // Set the volume to 50% (0.5)
+        // Set the volume to 50% (0.5)
         audioElement.volume = 0.5;
-        
+
         // Function to check the display property and play audio if it's "block"
         function checkDisplayAndPlayAudio() {
             if (window.getComputedStyle(accessDeniedDiv).display === 'block') {
