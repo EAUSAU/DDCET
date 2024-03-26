@@ -223,50 +223,63 @@
                 }
 
                 /* Footer */
-                @media (min-width: 768px) {
-                    .footer-container {
-                        grid-template-columns: 1fr 1fr;
-                    }
-                }
-
-                @media (max-width: 767px) {
-                    .footer-container {
-                        grid-template-columns: 1fr;
-                    }
-                }
-
+                /* Footer styles */
                 footer {
                     background-color: #f8f9fa;
-                }
-
-                .footer-container {
-                    display: grid;
-                }
-
-                .description,
-                .rate-us {
-                    padding: 0px 10px;
-                    background-color: #004aff14;
-                    border: 1px solid #ddd;
-                    text-align: justify;
-                }
-
-                .rate-us button {
-                    margin-top: 5px;
-                    margin-bottom: 10px;
-                    background-color: white;
-                    border: 0.5px solid rgb(84, 84, 84);
-                }
-
-                .footer-bottom {
-                    background-color: #8c41e1;
-                    color: #fff;
-                    padding: 5px;
+                    padding: 20px 0;
                     text-align: center;
                 }
 
+                .footer-container {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                }
+
+                .footer-container>div {
+                    flex: 1;
+                    padding: 0 20px;
+                }
+
+                .description h3,
+                .rate-us h3,
+                .contact-us h3 {
+                    color: #333;
+                }
+
+                .description p,
+                .rate-us p,
+                .contact-us p {
+                    color: #666;
+                }
+
+                .btn {
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                .btn:hover {
+                    background-color: #0056b3;
+                }
+
+                .footer-bottom {
+                    margin-top: 20px;
+                }
+
                 .footer-bottom p {
-                    margin-bottom: 0;
+                    color: #666;
+                }
+
+                /* Responsive styles */
+                @media (max-width: 768px) {
+                    .footer-container {
+                        flex-direction: column;
+                        align-items: center;
+                    }
                 }
 
                 /* Footer */
@@ -968,14 +981,21 @@
                     </div>
                     <div class="rate-us">
                         <h3>Rate Us</h3>
-                        <p>Rate your learning experience with our platform, Your feedback keeps motivating us to do more
+                        <p>Rate your learning experience with our platform. Your feedback keeps motivating us to do more
                             hard work.</p>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxrUEOBoCcrccrlTb3j_zt64ivdlmLglkXqCr_xOHNCOwAvg/viewform?usp=sharing"
                             target="_blank"><button class="btn btn-primary">Rate Us</button></a>
                     </div>
+                    <div class="contact-us">
+                        <h3>Contact Us</h3>
+                        <p>If you have any questions or feedback, feel free to contact us.</p>
+                        <a href="mailto:sahildushane@gmail.com?subject=Inquiry%20about%20DDCET" target="_blank"><button
+                                class="btn btn-primary">Email Us</button></a>
+                    </div>
+
                 </div>
                 <div class="footer-bottom">
-                    <p>Copyright &copy; 2024 DDCET. All Rights Reserved.</p>
+                    <p>2024 DDCET</p>
                 </div>
             </footer>
             <script>
