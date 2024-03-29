@@ -434,7 +434,7 @@
                     text-align: center;
                     font-size: 1.6rem;
                     background-color: #a85cfe;
-                    text-shadow: 2px 4px #8c41e1;
+                    text-shadow: 1px 3px #8c41e1;
                     padding: 5px;
                     color: white;
                 }
@@ -463,8 +463,18 @@
                     <h2>Latest Updates</h2>
                     <hr>
                     <!-- <p id="Logo">Best of Luck <br>For DDCET 2024</p> -->
-                    <!-- <p id="Not">No Latest Updates</p> -->
-                    <p>&#8226; DDCET 2024 Registration<span style="color: red; margin-left: 20px;">Closed</span></p>
+                    <!-- <p id="Not">No Latest Updates</p>  -->
+                    <p id="Logo">DDCET 2024 Registration<span style="color: red; margin-left: 20px;">Closed</span></p>
+                    <p id="Logo">Admit Card Download<span style="color: #00ff08;margin-left: 20px;">From 1st April to
+                            5th April</span>
+                        <br>
+                        <a id="updateLink" href="#text" class="highlight-link">Download Link</a>
+                    </p>
+                    <!-- <p>&#8226; Maths Ch 8 Logarithm<span id="new"><i class="fas fa-arrow-left"></i>
+                            New</span>
+                        <br>Extra Questions
+                    </p>
+                    <a id="updateLink" href="#section6" class="highlight-link">Click here for details</a> -->
                     <p>&#8226; Maths Ch 5 Function & Limit<span id="new"><i class="fas fa-arrow-left"></i>
                             New</span>
                         <br>Extra Questions
@@ -474,7 +484,7 @@
                         <br>Extra Questions
                     </p>
                     <a id="updateLink" href="#section4" class="highlight-link">Click here for details</a>
-                    <p>&#8226; Maths Ch 6 Differentiation & its <span id="new"><i class="fas fa-arrow-left"></i>
+                    <p>&#8226; Maths Ch 6 Differentiation & its<span id="new"><i class="fas fa-arrow-left"></i>
                             New</span>
                         <br>Application Extra Questions
                     </p>
@@ -511,7 +521,7 @@
             <div id="notification-icon">
                 <a href="#" onclick="showNotifications()">
                     <i class="fa-regular fa-bell fa-shake"></i><!-- Bell icon -->
-                    <span id="notification-counter">6</span> <!-- Counter -->
+                    <span id="notification-counter">7</span> <!-- Counter -->
                 </a>
             </div>
             <table cellspacing="0" cellpadding="6" style="margin-bottom:-10px; margin-top: 20px;">
@@ -683,7 +693,9 @@
                     <td><a href="https://drive.google.com/file/d/1J4ORwnkulFQjF4nutGAm0Qb48h4JDlZC/view?usp=drive_link"
                             target="_blank"><i class="fa-regular fa-file"></i></a></td>
                     <td><a href="https://drive.google.com/file/d/1vVyzfR-_qxXeGvAsOgN51_Oy0Y3Rs_VQ/view?usp=drivesdk"
-                            target="_blank"><i class="fa-regular fa-file"></i></a></td>
+                            target="_blank"><i class="fa-regular fa-file"></i></a>
+                        | <a id="section6" href="" target="_blank"><i class="fa-regular fa-file"></i></a>
+                    </td>
                 </tr>
                 <tr>
                     <td>Ch 9 Statistics</td>
@@ -1106,9 +1118,9 @@
 
 
     <script>
-         window.addEventListener("contextmenu", function (e) {
-             e.preventDefault();
-         });
+        window.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
         // Define an array of questions and their correct answers
         var questions = [
             // set2
